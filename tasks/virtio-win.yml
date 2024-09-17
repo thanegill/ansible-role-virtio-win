@@ -51,6 +51,10 @@
   ansible.windows.win_command: pnputil -i -a "{{ virtio_win_iso_path }}\viostor\{{ virtio_driver_directory }}\{{ ansible_env.PROCESSOR_ARCHITECTURE | lower }}\*.inf"
   when: driver_list.stdout is not search("viostor")
 
+- name: Install the Virtio SCSI Driver (vioscsi)
+  win_command: "pnputil -i -a \"{{ virtio_win_iso_path }}\\vioscsi\\{{ virtio_driver_directory }}\\{{ ansible_env.PROCESSOR_ARCHITECTURE | lower }}\\*.inf\""
+  when: driver_list.stdout is not search("vioscsi")
+
 # This workaround should be removed...
 # Using old 2k19 driver for Microsoft Windows Server 2022, because 2k22 is not ready yet
 - name: Install the QXL Graphics Driver (qxldod)
