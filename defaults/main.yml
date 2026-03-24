@@ -5,8 +5,10 @@
 vdagent_win_version: 0.10.0
 
 # URL of the virtio-win.iso
-virtio_win_iso_url: https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso
+virtio_win_iso_url: https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.271-1/
 # Path where the are the files/directories from virtio-win.iso (usually CD-ROM). If this is set, then the virtio-win.iso is going to be downloaded.
 # virtio_win_iso_path: E:\\
+
+qemu_ga_version: "109.1.0.0"
 
 force_install: false
